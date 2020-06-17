@@ -1,0 +1,37 @@
+{
+  "name": "taras",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/index.html ./src/**/index.jsx -d dist/dev",
+    "clean:dist": "rimraf dist",
+    "build": "yarn run clean:dist && parcel build ./src/**/index.jsx -d dist/prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nivo/bar": "^0.62.0",
+    "@nivo/pie": "^0.62.0",
+    "@nivo/radar": "^0.62.0",
+    "ag-grid-community": "^23.2.0",
+    "ag-grid-react": "^23.2.0",
+    "bootstrap": "^4.5.0",
+    "d3": "^5.16.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.0",
+    "prop-types": ">= 15.5.10 < 16.0.0",
+    "react": ">= 16.8.4 < 17.0.0",
+    "react-dom": "^16.13.1",
+    "react-grid-layout": "^0.18.3",
+    "react-router-dom": "^5.2.0",
+    "reactstrap": "^8.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "parcel-bundler": "^1.12.4"
+  }
+}

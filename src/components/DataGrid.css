@@ -1,0 +1,23 @@
+.default-cell-class {
+  display: flex;
+  align-items: center;
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: pre-wrap; /* css-3 */
+  word-wrap: break-word !important; /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  white-space: normal !important;
+  line-height: 25px !important;
+  font-size: 12px;
+}
+
+/* .ag-theme-alpine .ag-header-cell-header { */
+/* grid-size: 4px; */
+/* font-size: 10px; */
+/* } */
+
+.ag-theme-alpine {
+  grid-size: 2px;
+  font-size: 10px;
+}

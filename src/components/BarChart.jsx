@@ -128,7 +128,9 @@ const BarChart = ({
   axisBottomLegend = undefined,
   axisLeftLegend = undefined,
   axisBottomTickRotation = 0,
+  handleBarClick,
 }) => {
+  console.log('data', data);
   return (
     <ResponsiveBar
       data={data}
@@ -141,7 +143,7 @@ const BarChart = ({
       borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
       axisTop={null}
       axisRight={null}
-      onClick={(data) => console.log(data)}
+      onClick={(data) => handleBarClick(data)}
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,

@@ -13,8 +13,8 @@
     "Duration11",
     "Duration12"
   ],
-  "orgs": {
-    "0": {
+  "data": {
+    "Branches": {
       "Chicago": {
         "City": "Chicago",
         "Duration12": 70,
@@ -28,7 +28,54 @@
         "Duration4": 20,
         "Duration3": 10,
         "Duration2": 23,
-        "Duration1": 15
+        "Duration1": 15,
+        "Sections": {
+          "1": {
+            "City": "Chicago - Section 1",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "2": {
+            "City": "Chicago - Section 2",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "3": {
+            "City": "Chicago - Section 3",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          }
+        }
       },
       "Dallas": {
         "City": "Dallas",
@@ -43,7 +90,39 @@
         "Duration4": 10,
         "Duration3": 30,
         "Duration2": 20,
-        "Duration1": 10
+        "Duration1": 10,
+        "Sections": {
+          "1": {
+            "City": "Dallas - Section 1",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "2": {
+            "City": "Dallas - Section 2",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          }
+        }
       },
       "Boston": {
         "City": "Boston",
@@ -58,7 +137,69 @@
         "Duration4": 10,
         "Duration3": 39,
         "Duration2": 16,
-        "Duration1": 18
+        "Duration1": 18,
+        "Sections": {
+          "1": {
+            "City": "Boston - Section 1",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "2": {
+            "City": "Boston - Section 2",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "3": {
+            "City": "Boston - Section 3",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "4": {
+            "City": "Boston - Section 4",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          }
+        }
       },
       "Philadelphia": {
         "City": "Philadelphia",
@@ -73,220 +214,40 @@
         "Duration4": 10,
         "Duration3": 39,
         "Duration2": 16,
-        "Duration1": 18
-      }
-    },
-    "1": {
-      "Chicago": {
-        "1": {
-          "City": "Chicago - Branch 1",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "2": {
-          "City": "Chicago - Branch 2",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "3": {
-          "City": "Chicago - Branch 3",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        }
-      },
-      "Dallas": {
-        "1": {
-          "City": "Dallas - Branch 1",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "2": {
-          "City": "Dallas - Branch 2",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        }
-      },
-      "Boston": {
-        "1": {
-          "City": "Boston - Branch 1",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "2": {
-          "City": "Boston - Branch 2",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "3": {
-          "City": "Boston - Branch 3",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "4": {
-          "City": "Boston - Branch 4",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        }
-      },
-      "Philadelphia": {
-        "1": {
-          "City": "Philadelphia - Branch 1",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "2": {
-          "City": "Philadelphia - Branch 2",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
+        "Duration1": 18,
+        "Sections": {
+          "1": {
+            "City": "Philadelphia - Section 1",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          },
+          "2": {
+            "City": "Philadelphia - Section 2",
+            "Duration12": 70,
+            "Duration11": 9,
+            "Duration10": 14,
+            "Duration9": 20,
+            "Duration8": 27,
+            "Duration7": 40,
+            "Duration6": 25,
+            "Duration5": 10,
+            "Duration4": 20,
+            "Duration3": 10,
+            "Duration2": 23,
+            "Duration1": 15
+          }
         }
       }
-    },
-    "2": {
-      "Chicago": {
-        "1": {
-          "City": "Chicago - Section 1",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        },
-        "2": {
-          "City": "Chicago - Section 2",
-          "Duration12": 70,
-          "Duration11": 9,
-          "Duration10": 14,
-          "Duration9": 20,
-          "Duration8": 27,
-          "Duration7": 40,
-          "Duration6": 25,
-          "Duration5": 10,
-          "Duration4": 20,
-          "Duration3": 10,
-          "Duration2": 23,
-          "Duration1": 15
-        }
-      },
-      "Dallas": {},
-      "Boston": {},
-      "Philadelphia": {}
     }
   }
 }

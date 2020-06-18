@@ -37,10 +37,12 @@ class TestResource(object):
 class HiringOrgResource(object):
 
     def on_get(self, req, resp):
-        list_dict_data = df_hiring_org.to_dict(orient='record')
-        data = {'columns': df_hiring_org_columns, 'data': list_dict_data}
-        resp.body = json.dumps(data, ensure_ascii=False)
-        resp.status = falcon.HTTP_200
+        # list_dict_data = df_hiring_org.to_dict(orient='record')
+        # data = {'columns': df_hiring_org_columns, 'data': list_dict_data}
+        with open('./data/orgData.json') as file:
+            data = json.load(file)
+            resp.body = json.dumps(data, ensure_ascii=False)
+            resp.status = falcon.HTTP_200
 
 
 class HiringResource(object):

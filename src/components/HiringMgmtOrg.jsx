@@ -8,7 +8,9 @@ import { Column } from 'ag-grid-community';
 
 const HiringMgmtOrg = () => {
   const [data, setData] = useState([]);
-  const [level, setLevel] = useState(0);
+  const [barData, setBarData] = useState([]);
+  const [branch, setBranch] = useState();
+  const [section, setSection] = useState();
   const [columns, setColumns] = useState([]);
 
   useEffect(() => {
@@ -20,39 +22,43 @@ const HiringMgmtOrg = () => {
 
     setColumns(columns);
     setData(data);
+    setBarData(Object.values(data['Branches']));
   };
 
-  const getBarData = () => {
-    const getBarDataObject = (initObj) =>
-      Object.entries(initObj)
-        .filter(
-          ([key, value]) =>
-            (key.includes('Duration') || key.includes('Organization')) &&
-            !key.includes('Total')
-        )
-        .reduce((acc, [key, value]) => {
-          return { [key]: value, ...acc };
-        }, {});
+  const keys = [
+    'Duration1',
+    'Duration2',
+    'Duration3',
+    'Duration4',
+    'Duration5',
+    'Duration6',
+    'Duration7',
+    'Duration8',
+    'Duration9',
+    'Duration10',
+    'Duration11',
+    'Duration12',
+    'City',
+  ];
 
-    const barData = data.map((initBarObj) => getBarDataObject(initBarObj));
+  const updateBarData = (selectedBranch) => {
+    console.log('updating bar data', selectedBranch);
+    if (!branch && selectedBranch) {
+      setBarData(Object.values(data['Branches'][selectedBranch]['Sections']));
+    }
+  };
 
-    const getBarKeys = (column) => {
-      const keys = data.length
-        ? Object.keys(data[0]).filter(
-            (key) => key.includes(column) && !key.includes('Total')
-          )
-        : [];
+  const handleBarClick = (data) => {
+    console.log('handle click data', data);
 
-      return keys;
-    };
+    branch ? setSection(data.indexValue) : setBranch(data.indexValue);
+    updateBarData(data.indexValue);
+  };
 
-    const barKeys = getBarKeys('Duration');
-
-    console.log(barData);
-
-    console.log(barKeys);
-
-    return { barData, barKeys };
+  const breadCrumbBranchSelect = (branch) => {
+    console.log('branch', branch);
+    setSection(undefined);
+    updateBarData(branch);
   };
 
   return (
@@ -66,12 +72,18 @@ const HiringMgmtOrg = () => {
         <Col sm={12}>
           <Breadcrumb>
             <BreadcrumbItem>
-              <a href='#'>Division</a>
+              <a href='/hiring/org'>Staffing Division</a>
             </BreadcrumbItem>
-            <BreadcrumbItem>
-              <a href='#'>Branch</a>
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Section</BreadcrumbItem>
+            {branch ? (
+              <BreadcrumbItem>
+                <a href='#' onClick={() => breadCrumbBranchSelect(branch)}>
+                  {branch}
+                </a>
+              </BreadcrumbItem>
+            ) : undefined}
+            {section ? (
+              <BreadcrumbItem active>{section}</BreadcrumbItem>
+            ) : undefined}
           </Breadcrumb>
         </Col>
       </Row>
@@ -80,12 +92,13 @@ const HiringMgmtOrg = () => {
           <BarChart
             layout='horizontal'
             margin={{ top: -40, right: 130, bottom: 95, left: 125 }}
-            indexBy='Organization Level 1'
-            data={getBarData(data).barData}
-            keys={getBarData(data).barKeys}
+            indexBy='City'
+            data={barData}
+            keys={keys}
             axisLeftLegendOffset={-85}
             axisBottomLegend='Average Duration'
             axisLeftLegend='Organization'
+            handleBarClick={(data) => handleBarClick(data)}
           />
         </Col>
       </Row>

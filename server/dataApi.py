@@ -6,9 +6,21 @@ from falcon_cors import CORS
 
 cors = CORS(allow_origins_list=['http://localhost:1234'])
 
-df = pd.read_csv('./data/hiringmgmt.csv')
-df = df.dropna(subset=['Duration1', 'Duration2', 'Duration3', 'Duration4', 'Duration5',
-                       'Duration6', 'Duration7', 'Duration8', 'Duration9', 'Duration10', 'Duration11', 'Duration12'])
+df = pd.read_csv('./data/hiringmgmtnew.csv')
+df = df.dropna(subset=[
+    "Pre-Recruitment Process",
+    "Recruitment Package Development",
+    "Draft Job Opportunity Announcement",
+    "Review JOA",
+    "Finalize and Post JOA",
+    "JOA Open",
+    "Review Applicants and Create Cert",
+    "Interview and Selection",
+    "Tentative Offer",
+    "Acceptance",
+    "Conduct Checks",
+    "Final Offer/ EOD Established",
+])
 df = df.replace({np.nan: None})
 df_columns = df.columns.tolist()
 
@@ -39,7 +51,7 @@ class HiringOrgResource(object):
     def on_get(self, req, resp):
         # list_dict_data = df_hiring_org.to_dict(orient='record')
         # data = {'columns': df_hiring_org_columns, 'data': list_dict_data}
-        with open('./data/orgData.json') as file:
+        with open('./data/orgDataNew.json') as file:
             data = json.load(file)
             resp.body = json.dumps(data, ensure_ascii=False)
             resp.status = falcon.HTTP_200

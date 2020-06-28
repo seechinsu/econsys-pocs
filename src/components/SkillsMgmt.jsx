@@ -22,27 +22,8 @@ const SkillsMgmt = () => {
     setData(data);
   };
 
-  //   {
-  //       "employeeName": "derek",
-  //         "coding": 90,
-  //         "testing": 75,
-  //         "infrastructure": 60,
-  //         "project management": 30,
-  //         "requirements gathering": 30,
-  //         "customer support": 40
-  //     }
-
-  //   {
-  //     skill: "customer support",
-  //     derek: 77,
-  //     sam: 67,
-  //     tom: 99,
-  //     pete: 55,
-  //   },
-
   const getRadarData = () => {
     if (selectedRows.length) {
-      //   console.log("data", data);
       return columns
         .filter((col) => !col.includes("employee"))
         .map((col) => {

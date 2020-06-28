@@ -1,6 +1,21 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
+const steps = [
+  "Pre-Recruitment Process",
+  "Recruitment Package Development",
+  "Draft Job Opportunity Announcement",
+  "Review JOA",
+  "Finalize and Post JOA",
+  "JOA Open",
+  "Review Applicants and Create Cert",
+  "Interview and Selection",
+  "Tentative Offer",
+  "Acceptance",
+  "Conduct Checks",
+  "Final Offer/ EOD Established",
+];
+
 const placeholderData = [
   {
     id: "haskell",
@@ -37,7 +52,8 @@ const placeholderData = [
 const PieChart = ({ data = placeholderData }) => {
   const pieData = Object.entries(data)
     .filter(
-      ([key, value]) => key.includes("Duration") && !key.includes("Total")
+      ([key, value]) =>
+        steps.includes(key) && !key.includes("Total") && !key.includes("Date")
     )
     .reduce((acc, [key, value]) => {
       return [{ id: key, label: key, value }, ...acc];
@@ -46,12 +62,13 @@ const PieChart = ({ data = placeholderData }) => {
   return (
     <ResponsivePie
       data={pieData.length ? pieData : placeholderData}
-      margin={{ top: 40, right: 150, bottom: 80, left: 80 }}
+      margin={{ top: 40, right: 300, bottom: 80, left: 40 }}
       innerRadius={0.65}
       padAngle={1}
       colors={{ scheme: "accent" }}
       borderWidth={1}
       borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
+      enableRadialLabels={false}
       radialLabelsSkipAngle={10}
       radialLabelsTextXOffset={6}
       radialLabelsTextColor="#333333"
@@ -70,7 +87,7 @@ const PieChart = ({ data = placeholderData }) => {
           anchor: "right",
           direction: "column",
           translateY: 0,
-          translateX: 150,
+          translateX: 100,
           itemWidth: 100,
           itemHeight: 18,
           itemsSpacing: 2,

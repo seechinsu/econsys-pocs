@@ -17,6 +17,7 @@
     "Branches": {
       "Chicago": {
         "City": "Chicago",
+        "LevelType": "branch",
         "Duration12": 70,
         "Duration11": 9,
         "Duration10": 14,
@@ -32,6 +33,7 @@
         "Sections": {
           "1": {
             "City": "Chicago - Section 1",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -43,10 +45,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Chicago - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Chicago - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Chicago - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "2": {
             "City": "Chicago - Section 2",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -58,10 +111,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Chicago - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Chicago - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Chicago - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "3": {
             "City": "Chicago - Section 3",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -73,12 +177,47 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Chicago - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Chicago - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           }
         }
       },
       "Dallas": {
         "City": "Dallas",
+        "LevelType": "branch",
         "Duration12": 60,
         "Duration11": 25,
         "Duration10": 20,
@@ -94,6 +233,7 @@
         "Sections": {
           "1": {
             "City": "Dallas - Section 1",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -105,10 +245,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Dallas - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Dallas - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Dallas - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "2": {
             "City": "Dallas - Section 2",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -120,12 +311,63 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Dallas - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Dallas - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Dallas - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           }
         }
       },
       "Boston": {
         "City": "Boston",
+        "LevelType": "branch",
         "Duration12": 78,
         "Duration11": 16,
         "Duration10": 10,
@@ -141,6 +383,7 @@
         "Sections": {
           "1": {
             "City": "Boston - Section 1",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -152,10 +395,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Boston - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Boston - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Boston - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "2": {
             "City": "Boston - Section 2",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -167,10 +461,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Boston - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Boston - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Boston - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "3": {
             "City": "Boston - Section 3",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -182,10 +527,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Boston - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Boston - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Boston - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "4": {
             "City": "Boston - Section 4",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -197,12 +593,63 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Boston - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Boston - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Boston - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           }
         }
       },
       "Philadelphia": {
         "City": "Philadelphia",
+        "LevelType": "branch",
         "Duration12": 78,
         "Duration11": 16,
         "Duration10": 10,
@@ -218,6 +665,7 @@
         "Sections": {
           "1": {
             "City": "Philadelphia - Section 1",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -229,10 +677,61 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Philadelphia - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Philadelphia - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Philadelphia - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           },
           "2": {
             "City": "Philadelphia - Section 2",
+            "LevelType": "section",
             "Duration12": 70,
             "Duration11": 9,
             "Duration10": 14,
@@ -244,7 +743,57 @@
             "Duration4": 20,
             "Duration3": 10,
             "Duration2": 23,
-            "Duration1": 15
+            "Duration1": 15,
+            "Teams": {
+              "1": {
+                "City": "Philadelphia - Team 1",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "2": {
+                "City": "Philadelphia - Team 2",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              },
+              "3": {
+                "City": "Philadelphia - Team 3",
+                "LevelType": "team",
+                "Duration12": 70,
+                "Duration11": 9,
+                "Duration10": 14,
+                "Duration9": 20,
+                "Duration8": 27,
+                "Duration7": 40,
+                "Duration6": 25,
+                "Duration5": 10,
+                "Duration4": 20,
+                "Duration3": 10,
+                "Duration2": 23,
+                "Duration1": 15
+              }
+            }
           }
         }
       }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GridLayout, { WidthProvider } from 'react-grid-layout';
 import {
   Container,
@@ -101,23 +101,77 @@ const PositionCard = ({
   totalPositions,
   classificationDate,
   classifiedBy,
+  payPlan,
 }) => {
   const [modal, setModal] = useState(false);
+  // const [selectedRows, setSelectedRows] = useState([]);
+  const [budgetCodes, setBudgetCodes] = useState([]);
+  const [statusCodes, setStatusCodes] = useState([]);
+  const [gradeCodes, setGradeCodes] = useState([]);
 
   const toggle = () => setModal(!modal);
+
+  useEffect(() => {
+    setBudgetCodes(
+      Array.from({ length: totalPositions }, () =>
+        Math.floor(Math.random() * 1000 + 1)
+      )
+    );
+
+    setStatusCodes(
+      Array.from({ length: totalPositions }, () =>
+        Math.floor(Math.random() * 2 + 1)
+      )
+    );
+
+    setGradeCodes(
+      Array.from(
+        { length: totalPositions },
+        () => grades[Math.floor(Math.random() * grades.length)]
+      )
+    );
+  }, []);
+
+  const data = Array(totalPositions)
+    .fill({
+      'First Name': 'John',
+      'Last Name': 'Doe',
+      'Position Title': positionTitle,
+      'Pay Plan': payPlan,
+    })
+    .map((pos, index) => ({
+      ['Status']: statusCodes[index] === 1 ? 'Active' : 'Inactive',
+      ['Budget Code']: budgetCodes[index],
+      Grade: gradeCodes[index],
+      ...pos,
+    }));
+
+  const keys = [
+    'First Name',
+    'Last Name',
+    'Position Title',
+    'Budget Code',
+    'Pay Plan',
+    'Status',
+    'Grade',
+  ];
 
   return (
     <React.Fragment>
       <Modal isOpen={modal} toggle={toggle} size='lg'>
         <ModalHeader toggle={toggle}>{positionTitle}</ModalHeader>
         <ModalBody>
+          <Row>
+            <Col sm={12}></Col>
+          </Row>
           <DataGrid
             widthProp={960}
             heightProp={300}
-            columns={[]}
-            data={[]}
+            columns={keys}
+            data={data}
             rowSelection='single'
-            // updateSelectedRows={(rows) => setSelectedRows(rows)}
+            onRowDoubleClicked={(data) => console.log(data)}
+            updateSelectedRows={(rows) => null}
           />
         </ModalBody>
         <ModalFooter>
@@ -171,13 +225,13 @@ const PositionGrid = ({ positions }) => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
   const [sortedPositions, setSortedPositions] = useState(positions);
 
-  const layout = [];
-
   // x
   //   index%3 * 4
 
   // y
   //   Math.floor(index/3)*8
+
+  const layout = [];
 
   for (let index = 0; index < 48; index++) {
     layout.push({

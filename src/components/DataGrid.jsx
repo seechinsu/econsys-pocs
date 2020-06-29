@@ -11,6 +11,7 @@ const DataGrid = ({
   data: rowData,
   columns,
   updateSelectedRows,
+  onRowDoubleClicked,
   rowSelection,
 }) => {
   const grid = useRef();
@@ -46,6 +47,13 @@ const DataGrid = ({
     updateSelectedRows(selectedRows);
   };
 
+  const DoubleClicked = (row) => {
+    const { api } = grid.current;
+    const selectedRows = api.getSelectedRows();
+
+    onRowDoubleClicked ? onRowDoubleClicked(selectedRows) : null;
+  };
+
   return (
     <div
       className='ag-theme-alpine'
@@ -66,7 +74,7 @@ const DataGrid = ({
         onGridReady={onGridReady}
         onSelectionChanged={onSelectionChanged}
         onFirstDataRendered={onFirstDataRendered}
-        onRowDoubleClicked={() => console.log("I've been double clicked!")}
+        onRowDoubleClicked={DoubleClicked}
       />
     </div>
   );

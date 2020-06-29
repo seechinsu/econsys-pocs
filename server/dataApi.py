@@ -36,6 +36,37 @@ df_hiring_org = pd.read_csv('./data/hiringOrg.csv')
 df_hiring_org = df_hiring_org.replace({np.nan: None})
 df_hiring_org_columns = df_hiring_org.columns.tolist()
 
+df_position = pd.read_csv('./data/position_data.csv')
+
+
+def normalizeSeries(series):
+    length = len(str(series))
+    if length == 4:
+        return str(series)
+    else:
+        lead = "0"*(4-length)
+        return lead + str(series)
+
+
+df_position['series'] = df_position['series'].apply(normalizeSeries)
+
+
+def normalizeGrade(grade):
+    result = [grade.replace('"', '') for grade in grade.split(",")]
+    return result
+
+
+df_position['grades'] = df_position['grades'].apply(normalizeGrade)
+
+
+def normalizePosTitleVar(pos):
+    result = [p.replace('"', '') for p in pos.split(",")]
+    return result
+
+
+df_position['positionTitleVariations'] = df_position['positionTitleVariations'].apply(
+    normalizePosTitleVar)
+
 
 class TestResource(object):
 
@@ -77,14 +108,24 @@ class SkillResource(object):
         resp.status = falcon.HTTP_200
 
 
+class PositionResource(object):
+
+    def on_get(self, req, resp):
+        resp.body = json.dumps(df_position.to_dict(
+            orient='records'), indent=2, sort_keys=True, ensure_ascii=False)
+        resp.status = falcon.HTTP_200
+
+
 api = falcon.API(middleware=[cors.middleware])
 
 hiring_resource = HiringResource()
 hiring_org_resource = HiringOrgResource()
 test_resource = TestResource()
 skill_resource = SkillResource()
+position_resource = PositionResource()
 
 api.add_route('/position', hiring_resource)
 api.add_route('/org', hiring_org_resource)
 api.add_route('/test', test_resource)
 api.add_route('/skill', skill_resource)
+api.add_route('/positions', position_resource)

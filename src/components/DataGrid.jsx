@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
-import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+import React, { useRef } from 'react';
+import { AgGridReact } from 'ag-grid-react';
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-import "./DataGrid.css";
+import './DataGrid.css';
 
 const DataGrid = ({
   widthProp,
@@ -16,7 +16,7 @@ const DataGrid = ({
   const grid = useRef();
 
   const defaultColDef = {
-    cellClass: "default-cell-class",
+    cellClass: 'default-cell-class',
     autoheight: true,
     sortable: true,
     filter: true,
@@ -48,7 +48,7 @@ const DataGrid = ({
 
   return (
     <div
-      className="ag-theme-alpine"
+      className='ag-theme-alpine'
       style={{
         height: `${heightProp}px`,
       }}>
@@ -66,6 +66,7 @@ const DataGrid = ({
         onGridReady={onGridReady}
         onSelectionChanged={onSelectionChanged}
         onFirstDataRendered={onFirstDataRendered}
+        onRowDoubleClicked={() => console.log("I've been double clicked!")}
       />
     </div>
   );

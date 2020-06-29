@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
@@ -15,6 +15,13 @@ import SkillsMgmt from './components/SkillsMgmt';
 import HiringMgmtOrg from './components/HiringMgmtOrg';
 
 const App = () => {
+  const [positions, setPositions] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:8000/positions')
+      .then((res) => res.json())
+      .then((positions) => setPositions(positions));
+  }, []);
+
   return (
     <React.Fragment>
       <Router>
@@ -67,7 +74,7 @@ const App = () => {
             <HiringMgmtPosition />
           </Route>
           <Route path='/position'>
-            <PositionGrid />
+            <PositionGrid positions={positions} />
           </Route>
           <Route path='/skill'>
             <SkillsMgmt />

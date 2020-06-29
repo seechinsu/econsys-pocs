@@ -3,6 +3,11 @@
   font-size: 12px;
 }
 
-.card-header:hover {
+/* .card-header:hover {
   cursor: pointer;
+} */
+
+.modal-lg,
+.modal-xl {
+  max-width: 1000px;
 }

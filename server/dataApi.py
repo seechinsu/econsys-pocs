@@ -116,11 +116,15 @@ class PositionResource(object):
             orient='records'), indent=2, sort_keys=True, ensure_ascii=False)
         resp.status = falcon.HTTP_200
 
+def default(o):
+    if isinstance(o, (date, datetime)):
+        return o.strftime('%m-%d-%Y')
+
 class FpacResource(object):
 
     def on_get(self, req, resp):
         resp.body = json.dumps(df_fpac.to_dict(
-            orient='records'), indent=2, sort_keys=True, ensure_ascii=False)
+            orient='records'), indent=2, sort_keys=True, ensure_ascii=False, default=default)
         resp.status = falcon.HTTP_200
 
 api = falcon.API(middleware=[cors.middleware])
@@ -130,7 +134,7 @@ hiring_org_resource = HiringOrgResource()
 test_resource = TestResource()
 skill_resource = SkillResource()
 position_resource = PositionResource()
-fpac_ressource = FpacResource()
+fpac_resource = FpacResource()
 
 
 api.add_route('/position', hiring_resource)
@@ -138,4 +142,4 @@ api.add_route('/org', hiring_org_resource)
 api.add_route('/test', test_resource)
 api.add_route('/skill', skill_resource)
 api.add_route('/positions', position_resource)
-api.add_route('/fpac', fpac_ressource)
+api.add_route('/fpac', fpac_resource)

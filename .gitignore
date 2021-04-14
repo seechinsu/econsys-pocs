@@ -1,5 +1,8 @@
 .vscode/*
-.cache/*
+*/**/.cache
 yarn.lock
-/dist
+src/dist/*
+dist/*
+*.ipynb
+*/**/__pycache__
 node_modules/

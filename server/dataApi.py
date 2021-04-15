@@ -40,6 +40,8 @@ df_hiring_org_columns = df_hiring_org.columns.tolist()
 df_position = pd.read_csv('./data/position_data.csv')
 
 df_fpac = pd.read_excel('./data/fpac.xlsx')
+df_fpac = df_fpac.replace({np.nan: None})
+
 
 def normalizeSeries(series):
     length = len(str(series))
@@ -117,9 +119,11 @@ class PositionResource(object):
             orient='records'), indent=2, sort_keys=True, ensure_ascii=False)
         resp.status = falcon.HTTP_200
 
+
 def default(o):
     if isinstance(o, (date, datetime)):
         return o.strftime('%m-%d-%Y')
+
 
 class FpacResource(object):
 
@@ -127,6 +131,7 @@ class FpacResource(object):
         resp.body = json.dumps(df_fpac.to_dict(
             orient='records'), indent=2, sort_keys=True, ensure_ascii=False, default=default)
         resp.status = falcon.HTTP_200
+
 
 api = falcon.API(middleware=[cors.middleware])
 

@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   NavLink as RRNavLink,
-} from 'react-router-dom';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+} from "react-router-dom";
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
-import HiringMgmtPosition from './components/HiringMgmtPosition';
-import PositionGrid from './components/PositionGrid';
-import SkillsMgmt from './components/SkillsMgmt';
-import HiringMgmtOrg from './components/HiringMgmtOrg';
+import HiringMgmtPosition from "./components/HiringMgmtPosition";
+import PositionGrid from "./components/PositionGrid";
+import HiringMgmtOrg from "./components/HiringMgmtOrg";
+import PositionsByGrade from "./components/PositionsByGrade";
 
 const App = () => {
   const [positions, setPositions] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8000/positions')
+    fetch("http://localhost:8000/positions")
       .then((res) => res.json())
       .then((positions) => setPositions(positions));
   }, []);
@@ -25,33 +25,15 @@ const App = () => {
   return (
     <React.Fragment>
       <Router>
-        <Navbar color='light' light expand='md'>
-          <NavbarBrand href='/'>FedHR Navigator</NavbarBrand>
-          <Nav className='mr-auto' navbar>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">FedHR Navigator</NavbarBrand>
+          <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink
                 tag={RRNavLink}
                 exact
-                to='/hiring/position'
-                activeClassName='active'>
-                Recruitment by Position
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to='/hiring/org'
-                activeClassName='active'>
-                Recruitment By Org
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                tag={RRNavLink}
-                exact
-                to='/position'
-                activeClassName='active'>
+                to="/position"
+                activeClassName="active">
                 Position Management
               </NavLink>
             </NavItem>
@@ -59,25 +41,25 @@ const App = () => {
               <NavLink
                 tag={RRNavLink}
                 exact
-                to='/skill'
-                activeClassName='active'>
-                Skills Analytics
+                to="/positions/grade"
+                activeClassName="active">
+                Positions By Grade
               </NavLink>
             </NavItem>
           </Nav>
         </Navbar>
         <Switch>
-          <Route path='/hiring/org'>
+          <Route path="/hiring/org">
             <HiringMgmtOrg />
           </Route>
-          <Route path='/hiring/position'>
+          <Route path="/hiring/position">
             <HiringMgmtPosition />
           </Route>
-          <Route path='/position'>
-            <PositionGrid positions={positions} />
+          <Route path="/positions/grade">
+            <PositionsByGrade />
           </Route>
-          <Route path='/skill'>
-            <SkillsMgmt />
+          <Route path="/position">
+            <PositionGrid positions={positions} />
           </Route>
         </Switch>
       </Router>
@@ -85,4 +67,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));

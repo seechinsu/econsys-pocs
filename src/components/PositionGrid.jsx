@@ -19,6 +19,9 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  FormGroup,
+  Label,
+  Input,
 } from "reactstrap";
 
 import "./PositionGrid.css";
@@ -54,41 +57,6 @@ const DropDown = ({ dropdownOpen, toggle, sortPositions }) => (
   </Dropdown>
 );
 
-const GradeDropDown = ({ dropdownOpen, toggle, filterByGrade }) => {
-  const grades = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-  ];
-
-  return (
-    <Dropdown isOpen={dropdownOpen} toggle={toggle} style={{ margin: "10px" }}>
-      <DropdownToggle color="primary" caret>
-        Grade
-      </DropdownToggle>
-      <DropdownMenu>
-        {grades.map((grade) => (
-          <DropdownItem onClick={() => filterByGrade(grade)}>
-            {grade}
-          </DropdownItem>
-        ))}
-      </DropdownMenu>
-    </Dropdown>
-  );
-};
-
 const GridLayoutWithWidth = WidthProvider(GridLayout);
 
 const PositionCard = ({
@@ -103,7 +71,6 @@ const PositionCard = ({
   payPlan,
 }) => {
   const [modal, setModal] = useState(false);
-  // const [selectedRows, setSelectedRows] = useState([]);
   const [budgetCodes, setBudgetCodes] = useState([]);
   const [statusCodes, setStatusCodes] = useState([]);
   const [gradeCodes, setGradeCodes] = useState([]);
@@ -113,21 +80,21 @@ const PositionCard = ({
   useEffect(() => {
     setBudgetCodes(
       Array.from({ length: totalPositions }, () =>
-        Math.floor(Math.random() * 1000 + 1)
-      )
+        Math.floor(Math.random() * 1000 + 1),
+      ),
     );
 
     setStatusCodes(
       Array.from({ length: totalPositions }, () =>
-        Math.floor(Math.random() * 2 + 1)
-      )
+        Math.floor(Math.random() * 2 + 1),
+      ),
     );
 
     setGradeCodes(
       Array.from(
         { length: totalPositions },
-        () => grades[Math.floor(Math.random() * grades.length)]
-      )
+        () => grades[Math.floor(Math.random() * grades.length)],
+      ),
     );
   }, []);
 
@@ -220,16 +187,52 @@ const PositionCard = ({
   );
 };
 
+const searchFields = [
+  {
+    label: "First Name",
+    name: "firstName",
+    placeholder: "First",
+  },
+  {
+    label: "Last Name",
+    name: "lastName",
+    placeholder: "Last",
+  },
+  {
+    label: "Position Title",
+    name: "positionTitle",
+    placeholder: "Title",
+  },
+  {
+    label: "Budget Code",
+    name: "budgetCode",
+    placeholder: "Budget Code",
+  },
+  {
+    label: "Pay Plan",
+    name: "payPlan",
+    placeholder: "Pay Plan",
+  },
+  {
+    label: "Status",
+    name: "status",
+    placeholder: "Status",
+  },
+  {
+    label: "Grade",
+    name: "grade",
+    placeholder: "Grade",
+  },
+];
+
+const initSearchState = searchFields.reduce((acc, field) => {
+  return { ...acc, [field]: "" };
+}, {});
+
 const PositionGrid = ({ positions }) => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
-  const [gradeDropDownOpen, setGradeDropDownOpen] = useState(false);
   const [sortedPositions, setSortedPositions] = useState(positions);
-
-  // x
-  //   index%3 * 4
-
-  // y
-  //   Math.floor(index/3)*8
+  const [searchParams, setSearchParams] = useState(initSearchState);
 
   const layout = [];
 
@@ -256,29 +259,76 @@ const PositionGrid = ({ positions }) => {
     setSortedPositions(sorted);
   };
 
-  const filterByGrade = (grade) => {
-    const filtered = positions.filter((pos) => pos.grades.includes(grade));
-    // console.log(filtered);
+  const handleSearch = () => {
+    const trimmedSearchParams = Object.entries(searchParams).reduce(
+      (acc, [k, v]) => {
+        return v.trim().length !== 0 ? { ...acc, [k]: v.trim() } : acc;
+      },
+      {},
+    );
 
-    setSortedPositions();
+    console.log(`trimmedSearchParams`, trimmedSearchParams);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
   };
 
   return (
     <Container fluid>
       <Row>
-        {/* <Col sm={4}>
-          <GradeDropDown
-            dropdownOpen={gradeDropDownOpen}
-            toggle={() => setGradeDropDownOpen(!gradeDropDownOpen)}
-            filterByGrade={(grade) => filterByGrade(grade)}
-          />
-        </Col> */}
         <Col sm={12} style={{ textAlign: "right" }}>
           <DropDown
             dropdownOpen={dropdownOpen}
             toggle={() => setdropdownOpen(!dropdownOpen)}
             sortPositions={(order) => sortPositions(order)}
           />
+        </Col>
+      </Row>
+      <Row>
+        {searchFields.map((f) => (
+          <Col key={`position-${f.name}`}>
+            <FormGroup>
+              <Label for={f.name}>{f.label}</Label>
+              <Input
+                type="text"
+                name={f.name}
+                id={`position-${f.name}`}
+                placeholder={f.placeholder}
+                value={searchParams[f.name]}
+                onKeyDown={handleKeyDown}
+                onChange={(e) =>
+                  setSearchParams({
+                    ...searchParams,
+                    [f.name]: e.target.value,
+                  })
+                }
+              />
+            </FormGroup>
+          </Col>
+        ))}
+        <Col
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+          }}>
+          <FormGroup
+            style={{
+              display: "flex",
+              flexDirection: "inherit",
+              justifyContent: "flex-end",
+            }}>
+            <Button
+              type="button"
+              color="primary"
+              onClick={handleSearch}
+              style={{ width: "inherit" }}>
+              Search
+            </Button>
+          </FormGroup>
         </Col>
       </Row>
       <Row>

@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Building docker image and starting container..."
+docker build -t dash-app . 
+docker container stop dash-app
+docker container rm dash-app 
+docker run --name dash-app -p 8000:8000  -d dash-app 
+
+docker exec -it dash-app  /bin/sh
